@@ -2,6 +2,8 @@
 Beamer theme for the Hochschule Furtwangen University.
 This theme was forked from [UiB by Martin Helso](https://github.com/martinhelso/UiB).
 
+![Image of first slide](https://git.unfug.hs-furtwangen.de/weberval/HFU-Beamer/-/raw/master/HFU-images/preview.png)
+
 ## Logo
 The logo in the lower right corner can be removed from a specific `frame`
 using the macro `\hidelogo` outside of the `frame` like this:
