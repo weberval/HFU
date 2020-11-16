@@ -1,5 +1,5 @@
-% Theme for the University of Bergen
-% Implemented by Martin Helsø (martibhe@math.uio.no)
+% Theme for the University Furtwangen
+% Implemented by Valentin Weber (weberval@hs-furtwangen.de)
 % Version 27-08-2020
 
 
@@ -9,11 +9,10 @@
 \RequirePackage{calc}
 \RequirePackage{etoolbox}
 \RequirePackage[LGR, T1]{fontenc}
-\RequirePackage[utf8]{inputenx}
 \RequirePackage{thmtools}
 \RequirePackage{tikz}
 \hypersetup{colorlinks,
-            urlcolor  = uiblink,
+            urlcolor  = hfulink,
             linkcolor =,
             citecolor =}
 
@@ -24,39 +23,23 @@
 %% Standard headers:
 \DeclareOptionBeamer{american}
 {
-    \def \UiBlang {eng}
-    \def \UiBlangII {american}
+    \def \HFUlang {eng}
+    \def \HFUlangII {american}
 }
 \DeclareOptionBeamer{english}
 {
-    \def \UiBlang {eng}
-    \def \UiBlangII {english}
+    \def \HFUlang {eng}
+    \def \HFUlangII {english}
 }
 \DeclareOptionBeamer{UKenglish}
 {
-    \def \UiBlangII {english}\def \UiBlang {eng}
-    \def \UiBlangII {UKenglish}
+    \def \HFUlangII {english}\def \HFUlang {eng}
+    \def \HFUlangII {UKenglish}
 }
 \DeclareOptionBeamer{USenglish}
 {
-    \def \UiBlang {eng}
-    \def \UiBlangII {USenglish}
-}
-\DeclareOptionBeamer{norsk}
-{
-    \def \UiBlang {bm}
-    \def \UiBlangII {norsk}
-    \pretolerance = 2000
-    \tolerance    = 6000
-    \hbadness     = 6000
-}
-\DeclareOptionBeamer{nynorsk}
-{
-    \def \UiBlang {nn}
-    \def \UiBlangII {nynorsk}
-    \pretolerance = 2000
-    \tolerance    = 6000
-    \hbadness     = 6000
+    \def \HFUlang {eng}
+    \def \HFUlangII {USenglish}
 }
 \urlstyle{same}
 
@@ -66,9 +49,9 @@
 
 
 %% Theorem numbers:
-\DeclareOptionBeamer{unnumbered}{ \def \UiBtheorem {}          }
-\DeclareOptionBeamer{numbered}  { \def \UiBtheorem {numbered}  }
-\DeclareOptionBeamer{AMS}       { \def \UiBtheorem {ams style} }
+\DeclareOptionBeamer{unnumbered}{ \def \HFUtheorem {}          }
+\DeclareOptionBeamer{numbered}  { \def \HFUtheorem {numbered}  }
+\DeclareOptionBeamer{AMS}       { \def \HFUtheorem {ams style} }
 
 
 %% Font:
@@ -76,15 +59,15 @@
 \providebool{latinmodern}
 \DeclareOptionBeamer{SansSerif}
 {
-    \def \UiBfont {default}
+    \def \HFUfont {default}
     \setbool{neohellenic}{true}
     \setbool{latinmodern}{false}
     \AtBeginDocument{\sbox0{\(\mathsf{\xdef\mathsfgroup{\the\mathgroup}}\)}}
     \def\operator@font{\mathgroup\mathsfgroup}
 }
-\DeclareOptionBeamer{UiBSerif}
+\DeclareOptionBeamer{HFUSerif}
 {
-    \def \UiBfont {professionalfonts}
+    \def \HFUfont {professionalfonts}
     \setbool{neohellenic}{false}
     \setbool{latinmodern}{false}
     \AtBeginDocument{\sbox0{\(\mathrm{\xdef\mathrmgroup{\the\mathgroup}}\)}}
@@ -92,7 +75,7 @@
 }
 \DeclareOptionBeamer{Serif}
 {
-    \def \UiBfont {serif}
+    \def \HFUfont {serif}
     \setbool{neohellenic}{false}
     \setbool{latinmodern}{true}
     \AtBeginDocument{\sbox0{\(\mathrm{\xdef\mathrmgroup{\the\mathgroup}}\)}}
@@ -101,8 +84,8 @@
 
 
 %% Automatic title frame:
-\DeclareOptionBeamer{TitlePage} { \def \UiBfirstframe {\TitlePage}  }
-\DeclareOptionBeamer{NoTitlePage} { \def \UiBfirstframe {} }
+\DeclareOptionBeamer{TitlePage} { \def \HFUfirstframe {\TitlePage}  }
+\DeclareOptionBeamer{NoTitlePage} { \def \HFUfirstframe {} }
 
 
 \ExecuteOptionsBeamer{english}
@@ -113,10 +96,10 @@
 \ProcessOptionsBeamer
 
 
-\AtBeginDocument{ \UiBfirstframe }
+\AtBeginDocument{ \HFUfirstframe }
 
 
-\RequirePackage[\UiBlangII]{babel}
+\RequirePackage[\HFUlangII]{babel}
 
 
 % Use a neohellenic font from the Greek Font Society
@@ -179,11 +162,11 @@
 
 
 %% Official colours:
-\definecolor{uibred}  {HTML}{db3f3d}
-\definecolor{uibblue} {HTML}{4ea0b7}
-\definecolor{uibgreen}{HTML}{789a5b}
-\definecolor{uibgray} {HTML}{d0cac2}
-\definecolor{uiblink} {HTML}{00769E}
+\definecolor{hfuapplegreen}  {HTML}{61993b}
+\definecolor{hfuopalgreen}{HTML}{005f4e}
+\definecolor{hfulightgray} {HTML}{c1c6c8}
+\definecolor{hfuanthrazit} {HTML}{5b6770}
+\definecolor{hfulink} {HTML}{61993b}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,10 +176,10 @@
 
 
 \useinnertheme{rectangles}
-\usefonttheme{\UiBfont}
+\usefonttheme{\HFUfont}
 
 
-\setbeamertemplate{theorems}[\UiBtheorem]
+\setbeamertemplate{theorems}[\HFUtheorem]
 \setbeamertemplate{qed symbol}{\(\blacksquare\)}
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{caption label separator}{: }
@@ -205,21 +188,21 @@
 
 
 %% Standard colours:
-\colorlet{alert}{uibblue}
-\setbeamercolor{structure}{fg = uibred}
+\colorlet{alert}{hfuapplegreen}
+\setbeamercolor{structure}{fg = hfuapplegreen}
 \setbeamercolor{block title}{fg = white,
-                             bg = uibred}
-\setbeamercolor{block body} {bg = uibgray}
+                             bg = hfuanthrazit}
+\setbeamercolor{block body} {bg = hfulightgray}
 \setbeamercolor{block title example}{fg = white,
-                                     bg = uibgreen}
-\setbeamercolor{block body example} {bg = uibgray}
+                                     bg = hfuopalgreen}
+\setbeamercolor{block body example} {bg = hfulightgray}
 \setbeamercolor{block title alerted}{fg = white,
-                                     bg = uibblue}
-\setbeamercolor{block body alerted} {bg = uibgray}
-\setbeamercolor{alerted text} {fg = uibblue}
-\setbeamercolor{footnote mark}{fg = uibred}
+                                     bg = hfuapplegreen}
+\setbeamercolor{block body alerted} {bg = hfulightgray}
+\setbeamercolor{alerted text} {fg = hfuapplegreen}
+\setbeamercolor{footnote mark}{fg = hfuopalgreen}
 \setbeamercolor{section in head/foot}{fg = white,
-                                      bg = uibred}
+                                      bg = hfuapplegreen}
 \setbeamercolor{section in toc}{fg = black}
 \setbeamercolor{bibliography entry location}{fg = structure}
 
@@ -233,7 +216,7 @@
 \setbeamerfont{title}     {size   = \huge,
                            series = \bfseries}
 \setbeamerfont{subtitle}  {size   = \LARGE,
-                           series = \normalfont\rmfamily}
+                           series = \normalfont\mdseries}
 \setbeamerfont{frametitle}{size = \LARGE,
                            series = \bfseries}
 \setbeamerfont{title in head/foot} {series = \bfseries}
@@ -270,7 +253,7 @@
             \insertauthor
             \vfill
             \hfill
-            \includegraphics[scale = 0.4]{UiB-images/UiB-logo-\UiBlang}
+            \includegraphics[height = 0.12\paperheight]{HFU-images/Logo_HFU_ws.pdf}
         \end{minipage}
     \end{beamercolorbox}
     \vspace*{-1.3em}
@@ -279,7 +262,6 @@
 
 \newcommand{\TitlePage}
 {{
-    \setbeamercolor{background canvas}{bg = uibgray}
     \begin{frame}[b, plain, noframenumbering]
         \titlepage
     \end{frame}
@@ -356,7 +338,7 @@
 {
     \logo
     {
-        \includegraphics[height = 0.1\paperheight]{UiB-images/UiB-emblem}
+        \includegraphics[height = 0.1\paperheight]{HFU-images/Logo_HFU_sw.pdf}
     }
 }
 \showlogo
@@ -545,94 +527,6 @@
 \mode<all>
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%% Translate environment names to Norwegian:
-\uselanguage {\UiBlang}
-\languagepath{\UiBlang}
-
-\deftranslation[to = bm]{assumption} {antakelse}
-\deftranslation[to = bm]{Assumption} {Antakelse}
-\deftranslation[to = nn]{assumption} {f\o{}resetnad}
-\deftranslation[to = nn]{Assumption} {F\o{}resetnad}
-\deftranslation[to = bm]{axiom}      {aksiom}
-\deftranslation[to = bm]{Axiom}      {Aksiom}
-\deftranslation[to = nn]{axiom}      {aksiom}
-\deftranslation[to = nn]{Axiom}      {Aksiom}
-\deftranslation[to = bm]{calculation}{utregning}
-\deftranslation[to = bm]{Calculation}{Utregning}
-\deftranslation[to = nn]{calculation}{utrekning}
-\deftranslation[to = nn]{Calculation}{Utrekning}
-\deftranslation[to = bm]{computation}{beregning}
-\deftranslation[to = bm]{Computation}{Beregning}
-\deftranslation[to = nn]{computation}{berekning}
-\deftranslation[to = nn]{Computation}{Berekning}
-\deftranslation[to = bm]{conjecture} {formodning}
-\deftranslation[to = bm]{Conjecture} {Formodning}
-\deftranslation[to = nn]{conjecture} {forventing}
-\deftranslation[to = nn]{Conjecture} {Forventing}
-\deftranslation[to = bm]{corollary}  {korollar}
-\deftranslation[to = bm]{Corollary}  {Korollar}
-\deftranslation[to = nn]{corollary}  {korollar}
-\deftranslation[to = nn]{Corollary}  {Korollar}
-\deftranslation[to = bm]{definition} {definisjon}
-\deftranslation[to = bm]{Definition} {Definisjon}
-\deftranslation[to = nn]{definition} {definisjon}
-\deftranslation[to = nn]{Definition} {Definisjon}
-\deftranslation[to = bm]{definitions}{definisjoner}
-\deftranslation[to = bm]{Definitions}{Definisjoner}
-\deftranslation[to = nn]{definitions}{definisjonar}
-\deftranslation[to = nn]{Definitions}{Definisjonar}
-\deftranslation[to = bm]{example}    {eksempel}
-\deftranslation[to = bm]{Example}    {Eksempel}
-\deftranslation[to = nn]{example}    {d\o{}me}
-\deftranslation[to = nn]{Example}    {D\o{}me}
-\deftranslation[to = bm]{examples}   {eksempler}
-\deftranslation[to = bm]{Examples}   {Eksempler}
-\deftranslation[to = nn]{examples}   {d\o{}me}
-\deftranslation[to = nn]{Examples}   {D\o{}me}
-\deftranslation[to = bm]{fact}       {faktum}
-\deftranslation[to = bm]{Fact}       {Faktum}
-\deftranslation[to = nn]{fact}       {faktum}
-\deftranslation[to = nn]{Fact}       {Faktum}
-\deftranslation[to = bm]{facts}      {fakta}
-\deftranslation[to = bm]{Facts}      {Fakta}
-\deftranslation[to = nn]{facts}      {faktum}
-\deftranslation[to = nn]{Facts}      {Faktum}
-\deftranslation[to = bm]{hypothesis} {hypotese}
-\deftranslation[to = bm]{Hypothesis} {Hypotese}
-\deftranslation[to = nn]{hypothesis} {hypotese}
-\deftranslation[to = nn]{Hypothesis} {Hypotese}
-\deftranslation[to = bm]{notation}   {notasjon}
-\deftranslation[to = bm]{Notation}   {Notasjon}
-\deftranslation[to = nn]{notation}   {notasjon}
-\deftranslation[to = nn]{Notation}   {Notasjon}
-\deftranslation[to = bm]{observation}{observasjon}
-\deftranslation[to = bm]{Observation}{Observasjon}
-\deftranslation[to = nn]{observation}{observasjon}
-\deftranslation[to = nn]{Observation}{Observasjon}
-\deftranslation[to = bm]{property}   {egenskap}
-\deftranslation[to = bm]{Property}   {Egenskap}
-\deftranslation[to = nn]{property}   {eigenskap}
-\deftranslation[to = nn]{Property}   {Eigenskap}
-\deftranslation[to = bm]{proposition}{proposisjon}
-\deftranslation[to = bm]{Proposition}{Proposisjon}
-\deftranslation[to = nn]{proposition}{proposisjon}
-\deftranslation[to = nn]{Proposition}{Proposisjon}
-\deftranslation[to = bm]{remark}     {bemerkning}
-\deftranslation[to = bm]{Remark}     {Bemerkning}
-\deftranslation[to = nn]{remark}     {merknad}
-\deftranslation[to = nn]{Remark}     {Merknad}
-\deftranslation[to = bm]{remarks}    {bemerkninger}
-\deftranslation[to = bm]{Remarks}    {Bemerkninger}
-\deftranslation[to = nn]{remarks}    {merknadar}
-\deftranslation[to = nn]{Remarks}    {Merknadar}
-\deftranslation[to = bm]{theorem}    {teorem}
-\deftranslation[to = bm]{Theorem}    {Teorem}
-\deftranslation[to = nn]{theorem}    {teorem}
-\deftranslation[to = nn]{Theorem}    {Teorem}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -640,51 +534,51 @@
 %% Define additional theorem-like environments:
 \declaretheorem[style   = plain,
                 sibling = theorem,
-                name    = {\translate[to=\UiBlang]{Conjecture}}]
+                name    = {\translate[to=\HFUlang]{Conjecture}}]
                 {conjecture}
 \declaretheorem[style   = plain,
                 sibling = theorem,
-                name    = {\translate[to=\UiBlang]{Facts}}]
+                name    = {\translate[to=\HFUlang]{Facts}}]
                 {facts}
 \declaretheorem[style   = plain,
                 sibling = theorem,
-                name    = {\translate[to=\UiBlang]{Hypothesis}}]
+                name    = {\translate[to=\HFUlang]{Hypothesis}}]
                 {hypothesis}
 \declaretheorem[style   = plain,
                 sibling = theorem,
-                name    = {\translate[to=\UiBlang]{Observation}}]
+                name    = {\translate[to=\HFUlang]{Observation}}]
                 {observation}
 \declaretheorem[style   = plain,
                 sibling = theorem,
-                name    = {\translate[to=\UiBlang]{Proposition}}]
+                name    = {\translate[to=\HFUlang]{Proposition}}]
                 {proposition}
 \declaretheorem[style = definition,
-                name  = {\translate[to=\UiBlang]{Assumption}}]
+                name  = {\translate[to=\HFUlang]{Assumption}}]
                 {assumption}
 \declaretheorem[style = definition,
-                name  = {\translate[to=\UiBlang]{Axiom}}]
+                name  = {\translate[to=\HFUlang]{Axiom}}]
                 {axiom}
 \declaretheorem[style = definition,
-                name  = {\translate[to=\UiBlang]{Property}}]
+                name  = {\translate[to=\HFUlang]{Property}}]
                 {property}
 \declaretheorem[style    = definition,
                 numbered = no,
-                name     = {\translate[to=\UiBlang]{Calculation}}]
+                name     = {\translate[to=\HFUlang]{Calculation}}]
                 {calculation}
 \declaretheorem[style    = definition,
                 numbered = no,
-                name     = {\translate[to=\UiBlang]{Computation}}]
+                name     = {\translate[to=\HFUlang]{Computation}}]
                 {computation}
 \declaretheorem[style   = definition,
                 sibling = theorem,
-                name    = {\translate[to=\UiBlang]{Notation}}]
+                name    = {\translate[to=\HFUlang]{Notation}}]
                 {notation}
 \declaretheorem[style = remark,
-                name  = {\translate[to=\UiBlang]{Remark}}]
+                name  = {\translate[to=\HFUlang]{Remark}}]
                 {remark}
 \declaretheorem[style   = remark,
                 sibling = remark,
-                name    = {\translate[to=\UiBlang]{Remarks}}]
+                name    = {\translate[to=\HFUlang]{Remarks}}]
                 {remarks}
 
 

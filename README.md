@@ -1,9 +1,6 @@
-# UiB
-Beamer theme for the University of Bergen
-
-Available on [Overleaf](https://www.overleaf.com/latex/templates/uib-beamer-theme/ddsnzprthmfv).
-
-![Image of first slide](https://i.imgur.com/PFPWBvN.png)
+# HFU
+Beamer theme for the Hochschule Furtwangen University.
+This theme was forked from [UiB by Martin Helso](https://github.com/martinhelso/UiB).
 
 ## Logo
 The logo in the lower right corner can be removed from a specific `frame`
@@ -30,7 +27,7 @@ like the ones used in the `enumerate` environment.
 ## Options
 Options are given as
 ```LaTeX
-\usetheme[option]{UiB}
+\usetheme[option]{HFU}
 ```
 
 ### Font
@@ -56,11 +53,11 @@ If one of the options
 * `english`
 * `UKenglish`
 * `USenglish`
-* `norsk`
-* `nynorsk`
 
 are given,
 the environments listed below are translated into the specified language.
+
+German language support is under development.
 
 ## Environments
 An _environment_ is initialized with
@@ -79,7 +76,7 @@ The following environments are predefined by `beamer`:
 * `lemma`
 * `theorem`
 
-In addition, `UiB` defines these environments:
+In addition, `HFU` defines these environments:
 * `assumption`
 * `axiom`
 * `calculation`
