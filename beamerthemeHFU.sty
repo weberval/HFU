@@ -334,11 +334,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\hidelogo}{\logo{}}
-\newcommand{\showlogo}
-{
-    \logo
-    {
-        \includegraphics[height = 0.1\paperheight]{HFU-images/Logo_HFU_sw.pdf}
+\newcommand{\showlogo}{
+    \logo{
+        % logo right top
+        \pgfputat{\pgfxy(-0.07,7.3)}{\llap{\includegraphics[height = 0.08\paperheight]{HFU-images/Logo_HFU_sw.pdf}}}
+        % logo right bottom
+        %\includegraphics[height = 0.08\paperheight]{HFU-images/Logo_HFU_sw.pdf}
     }
 }
 \showlogo
