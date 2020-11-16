@@ -15,6 +15,15 @@ using the macro `\hidelogo` outside of the `frame` like this:
 ```
 Use `\showlogo` in the same manner to make the logo appear again. 
 
+## Table of Contents
+The table of contents is populated automatically using sections and subsections.
+You can insert the table of contents again and highlight the current section like this: 
+```LaTeX
+\begin{frame}{Table of contents}
+    \tableofcontents[currentsection]
+\end{frame}
+```
+
 ## Section page
 The command `\SectionPage` inserts a `[NoFrameNumbering, plain]` frame
 with red background issuing the `\sectionpage` command.
