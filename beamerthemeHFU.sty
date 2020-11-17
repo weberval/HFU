@@ -297,39 +297,37 @@
 
 \setbeamertemplate{footline}
 {
-    \hbox to \paperwidth
+    \leavevmode
+    \hbox
     {%
         \begin{beamercolorbox}[wd = 0.33\paperwidth,
                                ht = 2.25ex,
-                               dp = 1ex]
+                               dp = 1ex,
+                               rightskip=.3cm plus1fill]
                               {section in head/foot}
-
-                \hfil
                 \usebeamerfont{author in head/foot}
+                \hspace*{5ex}
                 \insertshortauthor
-                \hfil
         \end{beamercolorbox}%
         \begin{beamercolorbox}[wd = 0.34\paperwidth,
                                ht = 2.25ex,
-                               dp = 1ex]
+                               dp = 1ex,
+                               leftskip=.3cm plus1fill,
+                               rightskip=.3cm plus1fill]
                               {section in head/foot}
-
-                \hfil
                 \usebeamerfont{title in head/foot}
                 \insertshorttitle
-                \hfil
         \end{beamercolorbox}%
         \begin{beamercolorbox}[wd = 0.33\paperwidth,
                                ht = 2.25ex,
-                               dp = 1ex]
+                               dp = 1ex,
+                               leftskip=.3cm plus1fill]
                               {section in head/foot}
-
-                \hfil
                 \usebeamerfont{date in head/foot}
                 \insertshortdate
                 \hspace*{2em}
                 \insertframenumber{} / \inserttotalframenumber
-                \hspace*{2ex}
+                \hspace*{5ex}
         \end{beamercolorbox}
     }
     \vskip0pt
