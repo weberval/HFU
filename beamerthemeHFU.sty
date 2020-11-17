@@ -33,13 +33,18 @@
 }
 \DeclareOptionBeamer{UKenglish}
 {
-    \def \HFUlangII {english}\def \HFUlang {eng}
+    \def \HFUlang {eng}
     \def \HFUlangII {UKenglish}
 }
 \DeclareOptionBeamer{USenglish}
 {
     \def \HFUlang {eng}
     \def \HFUlangII {USenglish}
+}
+\DeclareOptionBeamer{german}
+{
+    \def \HFUlang {de}
+    \def \HFUlangII {german}
 }
 \urlstyle{same}
 
@@ -527,6 +532,54 @@
 
 \mode<all>
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Translate environment names to German:
+\uselanguage {\HFUlang}
+\languagepath{\HFUlang}
+
+\deftranslation[to = de]{assumption} {Annahme}
+\deftranslation[to = de]{Assumption} {Annahme}
+\deftranslation[to = de]{axiom}      {Axiom}
+\deftranslation[to = de]{Axiom}      {Axiom}
+\deftranslation[to = de]{calculation}{Kalkulation}
+\deftranslation[to = de]{Calculation}{Kalkulation}
+\deftranslation[to = de]{computation}{Berechnung}
+\deftranslation[to = de]{Computation}{Berechnung}
+\deftranslation[to = de]{conjecture} {Vermutung}
+\deftranslation[to = de]{Conjecture} {Vermutung}
+\deftranslation[to = de]{corollary}  {Folgerung}
+\deftranslation[to = de]{Corollary}  {Folgerung}
+\deftranslation[to = de]{definition} {Definition}
+\deftranslation[to = de]{Definition} {Definition}
+\deftranslation[to = de]{definitions}{Definitionen}
+\deftranslation[to = de]{Definitions}{Definitionen}
+\deftranslation[to = de]{example}    {Beispiel}
+\deftranslation[to = de]{Example}    {Beispiel}
+\deftranslation[to = de]{examples}   {Beispiele}
+\deftranslation[to = de]{Examples}   {Beispiele}
+\deftranslation[to = de]{fact}       {Fakt}
+\deftranslation[to = de]{Fact}       {Fakt}
+\deftranslation[to = de]{facts}      {Fakten}
+\deftranslation[to = de]{Facts}      {Fakten}
+\deftranslation[to = de]{hypothesis} {Hypothese}
+\deftranslation[to = de]{Hypothesis} {Hypothese}
+\deftranslation[to = de]{notation}   {Notation}
+\deftranslation[to = de]{Notation}   {Notation}
+\deftranslation[to = de]{observation}{Beobachtung}
+\deftranslation[to = de]{Observation}{Beobachtung}
+\deftranslation[to = de]{property}   {Eigenschaft}
+\deftranslation[to = de]{Property}   {Eigenschaft}
+\deftranslation[to = de]{proposition}{Vorschlag}
+\deftranslation[to = de]{Proposition}{Vorschlag}
+\deftranslation[to = de]{remark}     {Anmerkung}
+\deftranslation[to = de]{Remark}     {Anmerkung}
+\deftranslation[to = de]{remarks}    {Anmerkungen}
+\deftranslation[to = de]{Remarks}    {Anmerkungen}
+\deftranslation[to = de]{theorem}    {Satz}
+\deftranslation[to = de]{Theorem}    {Satz}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

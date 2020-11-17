@@ -64,11 +64,10 @@ If one of the options
 * `english`
 * `UKenglish`
 * `USenglish`
+* `german`
 
 are given,
 the environments listed below are translated into the specified language.
-
-German language support is under development.
 
 ## Environments
 An _environment_ is initialized with
