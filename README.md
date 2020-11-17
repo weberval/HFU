@@ -25,14 +25,12 @@ You can insert the table of contents again and highlight the current section lik
 ```
 
 ## Section page
-The command `\SectionPage` inserts a `[NoFrameNumbering, plain]` frame
-with red background issuing the `\sectionpage` command.
-The command `\SectionPage` is used outside of a `frame`,
-unlike `\sectionpage`. 
+The command `\SectionPage` inserts a plain frame with the centered section title on green background.
+The command `\SectionPageAlt` inserts a regular frame with the centered section title. 
 
 ## Enumerated references
 The command `\enumref` inserts a reference to an enumerated item
-in the shape of a red box,
+in the shape of a green box,
 like the ones used in the `enumerate` environment.
 
 ## Options
@@ -48,7 +46,7 @@ The option `MathSerif` enables serifs for mathematical symbols,
 whereas `Serif` enables serifs for all text.
 
 ### Logo
-By defualt,
+By default,
 the logo appears in the lower right corner.
 The option `logotop` moves the logo to the top right corner.
 

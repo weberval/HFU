@@ -220,6 +220,7 @@
 
 %% Custom colours:
 \setbeamercolor*{section page}{fg = white, bg = structure}
+\setbeamercolor{section page alt}{fg = hfuapplegreen, bg = white}
 
 %% Standard fonts:
 \setbeamerfont{author}    {size   = \huge,
@@ -530,6 +531,18 @@
     \setbeamercolor{background canvas}{parent = section page}
     \begin{frame}[c, plain, noframenumbering]
         \sectionpage
+    \end{frame}
+}}
+
+\newcommand{\SectionPageAlt}
+{{
+    \usebeamerfont{section page}
+    \usebeamercolor[fg]{section page alt}
+    \begin{frame}[c]
+        \begin{center}
+            \vskip.75\baselineskip
+            \insertsection
+        \end{center}
     \end{frame}
 }}
 
