@@ -5,7 +5,7 @@ This theme was forked from [UiB by Martin Helso](https://github.com/martinhelso/
 ![Image of first slide](HFU-images/preview.png)
 
 ## Logo
-The logo in the lower right corner can be removed from a specific `frame`
+The logo can be removed from a specific `frame`
 using the macro `\hidelogo` outside of the `frame` like this:
 ```LaTeX
 \hidelogo
@@ -46,6 +46,11 @@ By default,
 almost all text is typeset in a sans serif.
 The option `MathSerif` enables serifs for mathematical symbols,
 whereas `Serif` enables serifs for all text.
+
+### Logo
+By defualt,
+the logo appears in the lower right corner.
+The option `logotop` moves the logo to the top right corner.
 
 ### Numbered environments
 By default,
