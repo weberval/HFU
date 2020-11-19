@@ -11,6 +11,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[LGR, T1]{fontenc}
+\RequirePackage{datetime2}
 \RequirePackage{thmtools}
 \RequirePackage{tikz}
 \hypersetup{colorlinks,
@@ -225,8 +226,8 @@
 %% Standard fonts:
 \setbeamerfont{author}    {size   = \LARGE,
                            series = \normalfont\bfseries}
-\setbeamerfont{date}      {size   = \small,
-                            series = \normalfont\bfseries}
+\setbeamerfont{date}      {size   = \large,
+                            series = \normalfont\mdseries}
 \setbeamerfont{title}     {size   = \huge,
                            series = \bfseries}
 \setbeamerfont{subtitle}  {size   = \LARGE,
@@ -265,6 +266,10 @@
             \centering
             \usebeamerfont{author}
             \insertauthor
+            \\
+            \usebeamerfont{date}
+            \vspace{0.5ex}
+            \insertdate
             \vfill
             \hfill
             \includegraphics[height = 0.12\paperheight]{HFU-images/Logo_HFU_ws.pdf}
