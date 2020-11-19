@@ -9,6 +9,7 @@
 
 \RequirePackage{calc}
 \RequirePackage{etoolbox}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage[LGR, T1]{fontenc}
 \RequirePackage{thmtools}
 \RequirePackage{tikz}
@@ -45,7 +46,7 @@
 \DeclareOptionBeamer{german}
 {
     \def \HFUlang {de}
-    \def \HFUlangII {german}
+    \def \HFUlangII {ngerman}
 }
 \urlstyle{same}
 
@@ -173,11 +174,11 @@
 
 
 %% Official colours:
-\definecolor{hfuapplegreen}  {HTML}{61993b}
-\definecolor{hfuopalgreen}{HTML}{005f4e}
+\definecolor{hfuapplegreen}{HTML}{61993b}
+\definecolor{hfuopalgreen} {HTML}{005f4e}
 \definecolor{hfulightgray} {HTML}{c1c6c8}
 \definecolor{hfuanthrazit} {HTML}{5b6770}
-\definecolor{hfulink} {HTML}{61993b}
+\definecolor{hfulink}      {HTML}{61993b}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -223,8 +224,10 @@
 \setbeamercolor{section page alt}{fg = hfuapplegreen, bg = white}
 
 %% Standard fonts:
-\setbeamerfont{author}    {size   = \huge,
+\setbeamerfont{author}    {size   = \LARGE,
                            series = \normalfont\bfseries}
+\setbeamerfont{date}      {size   = \small,
+                            series = \normalfont\bfseries}
 \setbeamerfont{title}     {size   = \huge,
                            series = \bfseries}
 \setbeamerfont{subtitle}  {size   = \LARGE,
