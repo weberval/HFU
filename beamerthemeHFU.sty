@@ -542,6 +542,19 @@
     \end{frame}
 }}
 
+\newcommand{\SectionPageWithText}[1]
+{{
+    \setbeamercolor{background canvas}{parent = section page}
+    \usebeamerfont{section page}
+    \usebeamercolor[fg]{section page}
+    \begin{frame}[c, plain, noframenumbering]
+        \begin{center}
+            \vskip\baselineskip
+            #1
+        \end{center}
+    \end{frame}
+}}
+
 \newcommand{\SectionPageAlt}
 {{
     \usebeamerfont{section page}
@@ -550,6 +563,18 @@
         \begin{center}
             \vskip.75\baselineskip
             \insertsection
+        \end{center}
+    \end{frame}
+}}
+
+\newcommand{\SectionPageAltWithText}[1]
+{{
+    \usebeamerfont{section page}
+    \usebeamercolor[fg]{section page alt}
+    \begin{frame}[c]
+        \begin{center}
+            \vskip.75\baselineskip
+            #1
         \end{center}
     \end{frame}
 }}
