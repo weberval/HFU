@@ -26,7 +26,9 @@ You can insert the table of contents again and highlight the current section lik
 
 ## Section page
 The command `\SectionPage` inserts a plain frame with the centered section title on green background.
-The command `\SectionPageAlt` inserts a regular frame with the centered section title. 
+The command `\SectionPageAlt` inserts a regular frame with the centered section title.
+
+If you want to replicate this page style but don't want to create a section for it, you can use `\SectionPageWithText{<yourtext>}` or `\SectionPageAltWithText{<yourtext>}` to override the centered title text.
 
 ## Enumerated references
 The command `\enumref` inserts a reference to an enumerated item
