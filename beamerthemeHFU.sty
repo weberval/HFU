@@ -583,6 +583,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\newcommand<>{\ConclusionArrow}[1]
+{{
+    \only#2{
+        \begin{tikzpicture}[line width=.2cm]
+            \tikzset{every edge/.append style = {>=stealth, align=left}}
+            \draw[hfuapplegreen,arrows={-Triangle[length=0.5cm,width=.5cm]}] (0,0) - - (1,0);
+            \node[text width=\textwidth, anchor=west, right] at (1,0) {#1};
+        \end{tikzpicture}
+    }
+}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \mode<all>
 
 
