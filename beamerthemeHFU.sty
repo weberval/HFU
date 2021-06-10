@@ -22,7 +22,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %% Standard headers:
 \DeclareOptionBeamer{american}
 {
@@ -95,11 +94,13 @@
 \DeclareOptionBeamer{TitlePage} { \def \HFUfirstframe {\TitlePage}  }
 \DeclareOptionBeamer{NoTitlePage} { \def \HFUfirstframe {} }
 
+
 %% Top Logo positioning
 \providebool{logotop}
 \DeclareOptionBeamer{logotop}{
     \setbool{logotop}{true}
 }
+
 
 \ExecuteOptionsBeamer{english}
 \ExecuteOptionsBeamer{t}
@@ -356,7 +357,19 @@
     \logo{
         \ifbool{logotop}{
             % logo right top
-            \pgfputat{\pgfxy(-0.07,7.3)}{\llap{\includegraphics[height = 0.08\paperheight]{HFU-images/Logo_HFU_sw.pdf}}}
+            \ifdimequal{\beamer@paperheight}{10cm}{
+                \pgfputat{\pgfxy(-0.07,8.2)}{\llap{\includegraphics[height = 0.08\paperheight]{HFU-images/Logo_HFU_sw.pdf}}}
+            }{
+                \ifdimequal{\beamer@paperheight}{9.6cm}{
+                    \pgfputat{\pgfxy(-0.07,7.8)}{\llap{\includegraphics[height = 0.08\paperheight]{HFU-images/Logo_HFU_sw.pdf}}}
+                }{
+                    \ifdimequal{\beamer@paperheight}{9cm}{
+                        \pgfputat{\pgfxy(-0.07,7.2)}{\llap{\includegraphics[height = 0.08\paperheight]{HFU-images/Logo_HFU_sw.pdf}}}
+                    }{
+                        \ClassWarningNoLine{HFU-Beamer}{logotop is not available.}
+                    }
+                }
+            }
         }{
             % logo right bottom
             \includegraphics[height = 0.08\paperheight]{HFU-images/Logo_HFU_sw.pdf}
@@ -399,7 +412,7 @@
     \usebeamerfont{block body}
     \begin{beamercolorbox}[dp        = 1    ex,
                            leftskip  = 0.75 ex,
-                           rightskip = 0.75 ex,
+                             rightskip = 0.75 ex,
                            vmode]
                           {block body}
         \vspace*{1ex}
